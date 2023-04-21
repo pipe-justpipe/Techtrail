@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .formfield{
+            display: flex;
+            align-items:baseline;
+        }
+        #listing {
+            width: calc(100% + 30px);
+        }
+        label[for=listing] + p{
+            position: relative;
+            display: table;
+            border-radius:5px;
+            padding-right: 30px;
+        }
+        label[for=listing] + p::after{
+            content:"";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 20px;
+            border-radius: 0 5px 5px 0;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='30'><polyline points='8,12,15,8,22,12' fill='none' style='stroke:white;stroke-width:2'/><polyline points='8,18,15,22,22,18' fill='none' style='stroke:white;stroke-width:2'/></svg>"),
+            linear-gradient(to bottom, #08558c 0%, #0a5083 100%);;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+        input[type=file]::file-selector-button{
+            background-color: white;
+            display: inline-block;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body style="font-size:18px;">
+    <form action="" style="margin-top: 20px; align-content: center;">
+        <fieldset value="Your Address" style="width:50%; border: 1 solid black; margin: auto; text-align: left;">
+            <legend>Your address</legend>
+            <div style="margin-top: 10px;margin-bottom: 6px;">
+                <label style="margin-right:158px ;" for="fName">First name</label>
+                <input required type="text" name="fName" maxlength="20" id=" name" style="height: 18px;">
+            </div>
+            <div style="margin-top: 8px;margin-bottom: 6px;">
+                <label style="margin-right: 160px;" for="lName">Last name</label>
+                <input required type="text" name="lName" maxlength="20" id=" name" style="height: 18px;">
+            </div>
+            <div style="margin-top: 8px;margin-bottom: 6px;">
+                <label style="margin-right: 175px;" for="Address">Address</label>
+                <input required type="text" name="Address" maxlength="20" id=" name" style="height: 18px;">         
+            </div>
+            <div style="margin-top: 8px;margin-bottom: 6px;">
+                <label style="margin-right: 203px;" for="Address">City</label>
+                <input required type="text" city="Address" maxlength="20" id=" name" style="height: 18px;">    
+            </div>
+        </fieldset>
+        <fieldset style="width:50%; border: 1 solid black; margin: auto; text-align: left;">
+            <legend>Additional details</legend>
+            <div class="formfield" style="margin-top: 10px;margin-bottom: 6px;">
+                <label style="margin-right: 164px;" for="textarea">Biography</label>
+                <textarea required rows="3" cols="21" name="answer"></textarea>
+            </div>
+            <div style="margin-top: 10px; padding: 0;">
+                <label style="margin-right: 190px;" for="image">Image</label>
+                <input type="file">
+            </div>
+            <div style="margin-top: 8px;">
+                <label for="listing" style="margin-right: 155px;">Age Group</label>
+                <p style="display: inline-block; margin-top: 0;">
+                <select name="list" id="listing" style="border-radius: 5px; height: 25px;">
+                    <option value="0 to 9 years">0 to 9 years</option>
+                    <option value="10 to 19 years">10 to 19 years</option>
+                    <option value="20 to 29 years">20 to 29 years</option>
+                    <option value="30 to 39 years">30 t0 39</option>
+                    <option value="40 and Above">40 and Above</option>
+                </select>
+                </p>
+            </div>
+            
+        </fieldset>
+        <fieldset style="width:50%; border: 1 solid black; margin: auto; text-align: left;">
+            <legend>Interests</legend>
+            <div style="margin-top: 10px;margin-bottom: 6px;" class="formfield">
+                <span style="margin-right: 183px;">
+                    <label for="hobbies">Hobbies</label>
+                </span>
+                <select name="transport" size="4" style="overflow-y: hidden;" >
+                    <option value="Playing Soccer"> Playing Soccer</option>
+                    <option value="Train">Dancing</option>
+                    <option value="Bus">Gardening</option>
+                    <option value="Bus">Watching movies</option>
+                </select>     
+            </div>
+            <div style="margin-top: 0px; padding: 0;">
+                <label style="margin-right: 136px;" for="listing">Favourite car?</label>
+                <p style="display: inline-block; margin-top: 0;">
+                    <select name="list" id="listing" style="border-radius: 5px; height: 25px;">
+                            <option value="Volvo">Volvo</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Mercedes">Mercedes</option>
+                    </select>
+                </p>
+            </div>
+            <div style="margin: 0px; position: relative; top: -14px;"  class="formfield">
+                <span style="margin-right: 50px; margin-top: 0;">
+                    <label for="transport_sys" style="margin-top: 0;">Favourite public transport?</label>
+                </span> 
+                <select name="transport" size="4" style="overflow-y: hidden; margin-top: 0; padding-right: 35px;"  >
+                    <optgroup label="Ground">
+                        <option value="Train">Train</option>
+                        <option value="Bus">Bus</option>
+                    </optgroup>
+                    <optgroup label="Water"></optgroup>
+                </select>     
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

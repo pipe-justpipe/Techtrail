@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table {
+            width: 30%;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            padding: 10px;
+        }
+        table,td,th {
+            border: 1.5px solid black;
+            border-collapse: collapse;
+            font-size: 25px;
+        }
+        td{
+            padding-left: 8px;
+            padding: 10px;
+        }
+        .pip{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption><i style="font-size: 25px;">A test table with merged cells</i></caption>
+        <tr>
+            <td rowspan="2"></td>
+            <th colspan="2" rowspan="1" class="pip">Average</th>
+            <th rowspan="2" style=" border-bottom: 0; position: relative; top: -11px; padding-left: 42px; padding-right: 42px;">
+                Red<br>
+                eyes
+            </th>
+        </tr>
+        <tr>
+            <th class="pip">height</th>
+            <th class="pip">weight</th>
+        </tr>
+        <tr>
+            <th class="pip">Males</th>
+            <td>1.9</td>
+            <td>0.003</td>
+            <td style="padding-left: 8px;">40%</td>
+        </tr>
+        <tr>
+            <th class="pip">Females</th>
+            <td>1.7</td>
+            <td>0.002</td>
+            <td>43%</td>
+        </tr> 
+    </table>    
+</body>
+</html>
